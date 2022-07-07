@@ -49,7 +49,7 @@ jobs:
         if: startsWith(matrix.config.name, 'Ubuntu_Latest_GCC')
         run: |
           sudo apt-get update
-          sudo apt-get install install build-essential
+          sudo apt-get install build-essential
           gcc --version
       - name: Install dependencies on macos
         if: startsWith(matrix.config.os, 'macos')
@@ -61,8 +61,6 @@ jobs:
         shell: bash
         run: |
           g++ main.cpp -o output
-
-          ls -la | grep output | awk '{print $NF}' | xargs -I {} mv {} build 
       - name: Move to build on WIndows
         if: startsWith(matrix.config.os, 'windows')
         run: mv main.exe /build
