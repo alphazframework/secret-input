@@ -28,7 +28,7 @@ jobs:
         - {
             name: "macOS Latest GCC",
             os: macos-latest,
-            artifact: "macos_clang.7z",
+            artifact: "macos_gcc.7z",
             archiver: "7za a",
           }
 
