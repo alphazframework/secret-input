@@ -1,3 +1,6 @@
+[![GNU GCC Build Matrix](https://github.com/zestframework/secret-input/actions/workflows/build.yml/badge.svg)](https://github.com/zestframework/secret-input/actions/workflows/build.yml)
+[![Create Branch](https://github.com/zestframework/secret-input/actions/workflows/branch.yml/badge.svg)](https://github.com/zestframework/secret-input/actions/workflows/branch.yml)
+
 # secret-input
 
 This simple library enable to prompt users in interactive CLI apps for passwords without it being printed in the terminal.
