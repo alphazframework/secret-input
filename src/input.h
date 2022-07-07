@@ -3,7 +3,7 @@
 
 #include <cstdlib>
 
-#ifdef _WIN32
+#if defined(_WIN32) || defined(_WIN64)
   #include "console/window.h"
 #else
   #include "console/linux.h"
@@ -12,10 +12,10 @@
 namespace lablnet {
   void clear(void)
   {
-  #ifdef _WIN32
-      std::system("cls");
+  #if defined(_WIN32) || defined(_WIN64)
+      std::system("clear");
   #else
-      std::system ("clear");
+      std::system ("cls");
   #endif
   }
 }
