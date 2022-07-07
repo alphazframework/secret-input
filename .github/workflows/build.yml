@@ -63,12 +63,11 @@ jobs:
           g++ main.cpp -o output
 
           ls -la | grep output | awk '{print $NF}' | xargs -I {} mv {} build 
-      - name: Move to build
+      - name: Move to build on WIndows
         if: startsWith(matrix.config.os, 'windows')
         run: mv main.exe /build
-        if: startsWith(matrix.config.os, 'macos')
-        run: mv main /build
-        if: startsWith(matrix.config.os, 'Ubuntu_Latest_GCC')
+      - name: Move to build on Ubuntu and MacOS
+        if: startsWith(matrix.config.os, 'macos') || startsWith(matrix.config.os, 'Ubuntu_Latest_GCC')
         run: mv main /build
       - name: Pack
         shell: bash
