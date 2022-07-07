@@ -69,10 +69,10 @@ jobs:
           mkdir -p build
       - name: Move to build on WIndows
         if: startsWith(matrix.config.os, 'windows')
-        run: mv main.exe /build/main.exe
+        run: mv ./output ./build/output
       - name: Move to build on Ubuntu and MacOS
         if: startsWith(matrix.config.os, 'macos') || startsWith(matrix.config.name, 'Ubuntu_Latest_GCC')
-        run: mv ./main ./build/main
+        run: mv ./output ./build/output
 
       - name: Pack
         shell: bash
