@@ -24,14 +24,12 @@ namespace lablnet { // lablnet
       tcsetattr(STDIN_FILENO, TCSANOW, &t_old);
       return ch;
   }
-  std::string getpass(const char *prompt, bool show_asterisk = true)
+  std::string getpass(bool show_asterisk = true)
   {
     const char BACKSPACE = 127;
     const char RETURN = 10;
     std::string password;
     unsigned char ch = 0;
-
-    std::cout << prompt << std::endl;
 
     while((ch=getch()) != RETURN)
       {

@@ -6,15 +6,13 @@
 #include <windows.h>
 
 namespace lablnet { // lablnet
-  std::string getpass(const char *prompt, bool show_asterisk=true)
+  std::string getpass(bool show_asterisk=true)
   {
     const char BACKSPACE = 8;
     const char RETURN = 13;
 
-    string password;
+    std::string password;
     unsigned char ch = 0;
-
-    std::cout << prompt << std::endl;
 
     DWORD con_mode;
     DWORD dwRead;
