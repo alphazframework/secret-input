@@ -65,9 +65,9 @@ jobs:
           ls -la | grep output | awk '{print $NF}' | xargs -I {} mv {} build 
       - name: Move to build
         if: startsWith(matrix.config.os, 'windows')
-          run: mv main.exe /build
+        run: mv main.exe /build
         else:
-          run: mv main /build
+        run: mv main /build
       - name: Pack
         shell: bash
         working-directory: build
