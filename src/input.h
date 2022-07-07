@@ -3,11 +3,10 @@
 
 #include <cstdlib>
 
-#ifdef linux
-  #include "console/linux.h"
-#endif
 #ifdef _WIN32
   #include "console/window.h"
+#else
+  #include "console/linux.h"
 #endif
 
 namespace lablnet {
