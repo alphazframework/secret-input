@@ -69,7 +69,7 @@ jobs:
           mkdir -p build
       - name: Move to build on WIndows
         if: startsWith(matrix.config.os, 'windows')
-        run: mv ./output ./build/output
+        run: mv ./output.exe ./build/output.exe
       - name: Move to build on Ubuntu and MacOS
         if: startsWith(matrix.config.os, 'macos') || startsWith(matrix.config.name, 'Ubuntu_Latest_GCC')
         run: mv ./output ./build/output
