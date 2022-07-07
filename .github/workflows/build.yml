@@ -66,7 +66,9 @@ jobs:
       - name: Move to build
         if: startsWith(matrix.config.os, 'windows')
         run: mv main.exe /build
-        if: startsWith(matrix.config.os, 'macos') || startsWith(matrix.config.os, 'Ubuntu_Latest_GCC')
+        if: startsWith(matrix.config.os, 'macos')
+        run: mv main /build
+        if: startsWith(matrix.config.os, 'Ubuntu_Latest_GCC')
         run: mv main /build
       - name: Pack
         shell: bash
