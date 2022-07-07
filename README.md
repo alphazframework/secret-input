@@ -5,6 +5,9 @@
 
 This simple library enable to prompt users in interactive CLI apps for passwords without it being printed in the terminal.
 
+Easily prompt your users for passwords on Windows, Linux or MacOS without having them revealed in the terminal
+
+
 ## Example
 ```cpp
 // $main.cpp
@@ -29,7 +32,23 @@ int main(int argc, char *argv[]) {
 ```
 
 ### Build
+Install GNU GCC on Ubuntu
+```bash
+sudo apt update && sudo apt install build-essential
+```
 
+Install GCC on MacOS
+```bash
+brew install gcc
+```
+Install MinGW GCC on Windows,
+- For windows you need to install Chocolatey first
+- Follow the link [https://chocolatey.org/install](https://chocolatey.org/install)
+```bash
+choco install mingw
+```
+
+Now finallly, Build
 ```bash
 g++ main.cpp -o main
 ```
