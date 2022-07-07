@@ -63,7 +63,7 @@ jobs:
           g++ main.cpp -o output
       - name: List file
         run: |
-          ls -laR
+          ls
       - name: Make build diractory
         run: |
           mkdir -p build
