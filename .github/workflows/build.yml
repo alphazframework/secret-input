@@ -1,4 +1,4 @@
-name: CMake Build Matrix
+name: GNU GCC Build Matrix
 
 on: 
   push:
@@ -26,7 +26,7 @@ jobs:
             archiver: "7z a",
           }
         - {
-            name: "macOS Latest Clang",
+            name: "macOS Latest GCC",
             os: macos-latest,
             artifact: "macos_clang.7z",
             archiver: "7za a",
