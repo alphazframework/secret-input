@@ -63,16 +63,16 @@ jobs:
           g++ main.cpp -o output
       - name: List file
         run: |
-          ls -alh
+          ls -laR
       - name: Make build diractory
         run: |
           mkdir -p build
       - name: Move to build on WIndows
         if: startsWith(matrix.config.os, 'windows')
-        run: mv main.exe /build
+        run: mv main.exe /build/main.exe
       - name: Move to build on Ubuntu and MacOS
         if: startsWith(matrix.config.os, 'macos') || startsWith(matrix.config.os, 'Ubuntu_Latest_GCC')
-        run: mv main /build
+        run: mv main /build/main
       - name: Pack
         shell: bash
         working-directory: build
