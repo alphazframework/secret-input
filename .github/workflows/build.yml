@@ -61,6 +61,11 @@ jobs:
         shell: bash
         run: |
           g++ main.cpp -o output
+      - name: List file
+        run: |
+          ls -alh
+      - name: Make build diractory
+        run: |
           mkdir -p output
       - name: Move to build on WIndows
         if: startsWith(matrix.config.os, 'windows')
